@@ -9,11 +9,5 @@ upgrayedds = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /.*(upgrade).*/i, (msg) ->
-    r = Math.random()
-    if r <= 0.10
-      msg.send "Did you mean Upgrayedd?"
-      msg.send  msg.random upgrayedds
-
   robot.respond /upgrayedd/i, (msg) ->
     msg.send  msg.random upgrayedds
